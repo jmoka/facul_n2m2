@@ -110,24 +110,20 @@ import { Options, Vue } from 'vue-class-component';
   methods:{
     async Var_processar(){
           this.Var_visivel=true
-          let url = this.Var_url;
-          let index = this.Var_index
-          console.log(index)
+       
+          console.log(this.Var_index)
             try {
-                const resposta = await fetch(url);
+                const resposta = await fetch(this.Var_url);
                 const objetoAPI = await resposta.json();
-                let objatosAPI = objetoAPI.data;
-                this.Var_qtdCard_inicial=objatosAPI.length
-            
+                this.Var_qtdCard_inicial=objetoAPI.data.length
                 
-                
-                this.Var_imagem = objatosAPI[index].avatar 
-                this.Var_id_API = objatosAPI[index].id
-                this.Var_nome_API = objatosAPI[index].first_name  
-                this.Var_sobrenome_API = objatosAPI[index].last_name   
-                this.Var_email_API = objatosAPI[index].email 
+                this.Var_imagem = objetoAPI.data[this.Var_index].avatar 
+                this.Var_id_API = objetoAPI.data[this.Var_index].id
+                this.Var_nome_API = objetoAPI.data[this.Var_index].first_name  
+                this.Var_sobrenome_API = objetoAPI.data[this.Var_index].last_name   
+                this.Var_email_API = objetoAPI.data[this.Var_index].email 
             } catch (error) {
-              // alert(this.Var_erro_URL);
+               alert(error);
             }
 
             
@@ -144,23 +140,19 @@ import { Options, Vue } from 'vue-class-component';
 
       async Var_Proximo(){
         console.log("Proximo")
-        let url = this.Var_url
-        let index = this.Var_index
-
-        if (index > this.Var_index){
+          if (this.Var_index > this.Var_index){
           this.Var_index = this.Var_index+1;
         }
         try {   
-                const resposta = await fetch(url);
+                const resposta = await fetch(this.Var_url);
                 const objetoAPI = await resposta.json();
-                let objatosAPI = objetoAPI.data;
                 this.Var_qtdCard++;
-                if (this.Var_qtdCard < objatosAPI.length){
-                this.Var_imagem = objatosAPI[this.Var_qtdCard].avatar 
-                this.Var_id_API = objatosAPI[this.Var_qtdCard].id
-                this.Var_nome_API = objatosAPI[this.Var_qtdCard].first_name  
-                this.Var_sobrenome_API = objatosAPI[this.Var_qtdCard].last_name   
-                this.Var_email_API = objatosAPI[this.Var_qtdCard].email
+                if (this.Var_qtdCard < objetoAPI.data.length){
+                this.Var_imagem = objetoAPI.data[this.Var_qtdCard].avatar 
+                this.Var_id_API = objetoAPI.data[this.Var_qtdCard].id
+                this.Var_nome_API = objetoAPI.data[this.Var_qtdCard].first_name  
+                this.Var_sobrenome_API = objetoAPI.data[this.Var_qtdCard].last_name   
+                this.Var_email_API = objetoAPI.data[this.Var_qtdCard].email
                 }else{
                   alert("Chegou o Final da Lista")
                 }
@@ -172,24 +164,21 @@ import { Options, Vue } from 'vue-class-component';
 
       async Var_Anterior(){
         console.log("Anterior")
-        let url = this.Var_url
-        let index = this.Var_index
-
-        if (index > this.Var_index){
+         if (this.Var_index > this.Var_index){
           this.Var_index = this.Var_index+1;
         }
         try {   
-                const resposta = await fetch(url);
+                const resposta = await fetch(this.Var_url);
                 const objetoAPI = await resposta.json();
-                let objatosAPI = objetoAPI.data;
                 this.Var_qtdCard--;
                 if (this.Var_qtdCard > -1){
                 console.log(this.Var_qtdCard);
-                this.Var_imagem = objatosAPI[this.Var_qtdCard].avatar 
-                this.Var_id_API = objatosAPI[this.Var_qtdCard].id
-                this.Var_nome_API = objatosAPI[this.Var_qtdCard].first_name  
-                this.Var_sobrenome_API = objatosAPI[this.Var_qtdCard].last_name   
-                this.Var_email_API = objatosAPI[this.Var_qtdCard].email
+                               
+                this.Var_imagem = objetoAPI.data[this.Var_qtdCard].avatar 
+                this.Var_id_API = objetoAPI.data[this.Var_qtdCard].id
+                this.Var_nome_API = objetoAPI.data[this.Var_qtdCard].first_name  
+                this.Var_sobrenome_API = objetoAPI.data[this.Var_qtdCard].last_name   
+                this.Var_email_API = objetoAPI.data[this.Var_qtdCard].email
               }else{
                   alert("Chegou o Final da Lista")
                 }
