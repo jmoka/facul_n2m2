@@ -10,15 +10,9 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 
-
-
-// new Vue({
-//   el: '#app',
-
 @Options({
 
   props: {}, 
-
 
   data() {
     return {
@@ -38,7 +32,7 @@ import { Options, Vue } from 'vue-class-component';
   container.id = 'containerPrincipal';
 
 //==================================================================
-//todo: RESULTADO ( ARRAY)
+//RESULTADO ( ARRAY)
 let saida: number[] = [];
 let saidastring = saida.map(num=>num.toString())
 let saidaElemento=document.createElement("div");
@@ -51,9 +45,7 @@ let textEntrada=document.createElement("h4");
 let rotuloEntrada=document.createElement("h4");
 rotuloEntrada.innerHTML = "Lista Original: "
 
-
-
-// todo: Inserindo Elemento na div saida elemento
+// Inserindo Elemento na div saida elemento
 saidaElemento.appendChild(saidaElementoListaOriginal);
 saidaElementoListaOriginal.appendChild(rotuloEntrada);
 saidaElementoListaOriginal.appendChild(textEntrada);
@@ -62,8 +54,7 @@ saidaElementoListaResultado.appendChild(textSaidaRotulo);
 saidaElementoListaResultado.appendChild(textSaidarResultado);
 saidaElemento.appendChild(textSaidaexplicacao);
 
-
-//todo: ATRIBUTOS
+//ATRIBUTOS
 saidaElemento.id="saidaElemento";
 saidaElementoListaOriginal.id="saidaElementoListaOriginal"
 textEntrada.id="textEntrada"
@@ -71,7 +62,7 @@ textSaidaRotulo.id="textSaidaRotulo"
 saidaElementoListaResultado.id="saidaElementoListaResultado"
 textSaidarResultado.id="textSaidarResultado"
 
-// todo: CABEÇALHO
+// CABEÇALHO
 let cabecalho = document.createElement("div");
 
 let textoCabecalho = document.createElement("h4");
@@ -81,7 +72,7 @@ cabecalho.appendChild(textoCabecalho);
 
 //==========================================================================
 
-// todo: ELEMENTO1
+// ELEMENTO1
 let elemento1: HTMLElement = document.createElement("div");
 let textoElemento1: HTMLElement = document.createElement("h4");
 let inputElemento1: HTMLInputElement = document.createElement("input");
@@ -97,10 +88,7 @@ btnOrdenar.classList.add("btn");
 btnEmbaralhar.classList.add("btn");
 btnLimpar.classList.add("btn");
 
-
-
-
-//todo: CABEÇALHO
+//CABEÇALHO
 cabecalho=document.createElement("div");
 textoCabecalho=document.createElement("h4");
 textoCabecalho.innerHTML="Missão Prática | Nível 2 | Mundo 2";
@@ -108,7 +96,7 @@ cabecalho.appendChild(textoCabecalho);
 
 //==========================================================================
 
-//todo: Incluindo os Itens na DIV (elemento1)
+//Incluindo os Itens na DIV (elemento1)
 elemento1.appendChild(textoElemento1);
 elemento1.appendChild(inputElemento1);
 elemento1.appendChild(btnAdicionar);
@@ -116,7 +104,7 @@ elemento1.appendChild(btnOrdenar);
 elemento1.appendChild(btnEmbaralhar);
 elemento1.appendChild(btnLimpar);
 
-// todo: Adiciona o texto no botão e na Label Rotulo
+// Adiciona o texto no botão e na Label Rotulo
 btnAdicionar.innerHTML = "Incluir";
 btnOrdenar.innerHTML="Ordenar";
 btnEmbaralhar.innerHTML="Embaralhar";
@@ -130,7 +118,7 @@ inputElemento1.id="inputElemento1"
 
 //! FUNÇÕES 
 
-//TODO: Função ADICIONAR ELEMENTO na Array    
+//Função ADICIONAR ELEMENTO na Array    
 const adicionarElemento = () => {   
     const valorInserido= Number(inputElemento1.value);
     console.log(typeof valorInserido);
@@ -148,12 +136,12 @@ const adicionarElemento = () => {
     }
 }
 
-//TODO: Função ORDENAR UMA ARRAY  compareFunction na Array 
+//Função ORDENAR UMA ARRAY  compareFunction na Array 
 const compareFunction = (saida: number[]) => {
     return saida.sort((a, b) => a - b);
   };
   
-  //TODO: Função ORDENAR UMA ARRAY  Bubble-Sort na Array 
+  //Função ORDENAR UMA ARRAY  Bubble-Sort na Array 
   const bubbleSort = (array: number[]) => {
     let valorTrocado;
     do {
@@ -170,7 +158,7 @@ const compareFunction = (saida: number[]) => {
     return array;
   };
 
-  //TODO: Função ORDENAR UMA ARRAY-   selectionSort na Array 
+  //Função ORDENAR UMA ARRAY-   selectionSort na Array 
 const selectionSort = (array: number[]) => {
     for (let i = 0; i < array.length - 1; i++) {
       let minIndex = i;
@@ -189,7 +177,7 @@ const selectionSort = (array: number[]) => {
   }
 
 
-//TODO: Função ORDENAR UMA ARRAY-   quickSort na Array 
+//Função ORDENAR UMA ARRAY-   quickSort na Array 
 const quickSort = (array: number[], p: number, r: number) => {
     if (p < r) {
       const q = partition(array, p, r);
@@ -216,7 +204,7 @@ const quickSort = (array: number[], p: number, r: number) => {
     return i + 1;
   }
 
-  //TODO: Função EMBARALHA UMA ARRAY-   shuffle na Array 
+  //Função EMBARALHA UMA ARRAY-   shuffle na Array 
 const shuffle = (array: any[]) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -228,21 +216,21 @@ const shuffle = (array: any[]) => {
   };
   
   //! BOTÕES
-  //todo: CLICK DOS BOTÕES
+  //CLICK DOS BOTÕES
   
   // * BOTÃO ADICIONAR
   btnAdicionar.addEventListener("click", () => {
     adicionarElemento();
   });
   
-  //todo: ADICIONAR ELEMENTO USANDO O ENTER NO INPUT
+  // ADICIONAR ELEMENTO USANDO O ENTER NO INPUT
   inputElemento1.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
       adicionarElemento();
     }
   });
   
-  // * BOTÃO LIMPAR
+  //  BOTÃO LIMPAR
   btnLimpar.addEventListener("click", () => {
     if (saida.length==0 && saida.length < 1) {
       alert("Lista já se encontra vazia");
@@ -441,7 +429,6 @@ btnOrdenar.addEventListener("click",()=>{
 });
 
 
-
 //==========================================================================
 
 // DIV's RADIOS  
@@ -480,7 +467,6 @@ botaoRadio1.addEventListener("click",()=>{
     botaoRadio5.checked = false;
 })
 
-
 // RADIO 2
 const botaoRadio2=document.createElement("input");
 const labelBotaoRadio2=document.createElement("label");
@@ -496,7 +482,6 @@ botaoRadio2.addEventListener("click",()=>{
     botaoRadio1.checked = false;
     botaoRadio5.checked = false;
 })
-
 
 // RADIO 3
 const botaoRadio3=document.createElement("input");
@@ -530,7 +515,6 @@ botaoRadio4.addEventListener("click",()=>{
     botaoRadio5.checked = false;
 })
 
-
 // RADIO 5
 const botaoRadio5=document.createElement("input");
 const labelBotaoRadio5=document.createElement("label");
@@ -560,9 +544,6 @@ labelBotaoRadio5.classList.add("labelradio");
 botaoRadio5.classList.add("radios");
 
 
-
-
-
 botaoRadio1.addEventListener("click",()=>{
   if(botaoRadio1.checked==true){
     btnOrdenar.className = "mudaCorTesxtoOrdenar"}
@@ -584,7 +565,6 @@ botaoRadio5.addEventListener("click",()=>{
   if(botaoRadio5.checked==true){
     btnOrdenar.className = "mudaCorTesxtoOrdenar"}
 });
-
 
  container.appendChild(cabecalho)
  container.appendChild(elemento1)
