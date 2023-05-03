@@ -230,7 +230,7 @@ const shuffle = (array: any[]) => {
     }
   });
   
-  // * BOTÃO LIMPAR
+  //  BOTÃO LIMPAR
   btnLimpar.addEventListener("click", () => {
     if (saida.length==0 && saida.length < 1) {
       alert("Lista já se encontra vazia");
