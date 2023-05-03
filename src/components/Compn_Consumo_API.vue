@@ -129,13 +129,9 @@ import { Options, Vue } from 'vue-class-component';
             
       },
       
-     
-
       Var_abrir_site(){
         console.log('abrir site');
-        
-        
-        
+              
       },
 
       async Var_Proximo(){

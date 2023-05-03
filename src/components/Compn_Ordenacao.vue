@@ -83,14 +83,20 @@ cabecalho.appendChild(textoCabecalho);
 
 // todo: ELEMENTO1
 let elemento1: HTMLElement = document.createElement("div");
-
 let textoElemento1: HTMLElement = document.createElement("h4");
 let inputElemento1: HTMLInputElement = document.createElement("input");
-
 let btnAdicionar: HTMLButtonElement = document.createElement("button");
 let btnOrdenar: HTMLButtonElement = document.createElement("button");
 let btnEmbaralhar: HTMLButtonElement = document.createElement("button");
 let btnLimpar: HTMLButtonElement = document.createElement("button");
+textoElemento1.classList.add("mergem");
+inputElemento1.classList.add("input");
+inputElemento1.classList.add("mergem");
+btnAdicionar.classList.add("btn");
+btnOrdenar.classList.add("btn");
+btnEmbaralhar.classList.add("btn");
+btnLimpar.classList.add("btn");
+
 
 
 
@@ -101,22 +107,6 @@ textoCabecalho.innerHTML="Missão Prática | Nível 2 | Mundo 2";
 cabecalho.appendChild(textoCabecalho);
 
 //==========================================================================
-
-// todo: ELEMENTO1 
-elemento1=document.createElement("div");
-textoElemento1=document.createElement("h4");
-textoElemento1.classList.add("mergem")
-inputElemento1 = document.createElement("input");
-inputElemento1.classList.add("input");
-inputElemento1.classList.add("mergem")
-btnAdicionar = document.createElement("button");
-btnAdicionar.classList.add("mergem")
-btnOrdenar = document.createElement("button");
-btnOrdenar.classList.add("mergem")
-btnEmbaralhar = document.createElement("button");
-btnEmbaralhar.classList.add("mergem")
-btnLimpar = document.createElement("button");
-btnLimpar.classList.add("mergem")
 
 //todo: Incluindo os Itens na DIV (elemento1)
 elemento1.appendChild(textoElemento1);
@@ -456,22 +446,22 @@ btnOrdenar.addEventListener("click",()=>{
 
 // todo: RADIOS  
 const elementoRadio=document.createElement("div");
-const divRadio1=document.createElement("span");
-const divRadio2=document.createElement("span");
-const divRadio3=document.createElement("span");
-const divRadio4=document.createElement("span");
-const divRadio5=document.createElement("span");
+const divRadio1=document.createElement("div");
+const divRadio2=document.createElement("div");
+const divRadio3=document.createElement("div");
+const divRadio4=document.createElement("div");
+const divRadio5=document.createElement("div");
 elementoRadio.appendChild(divRadio1);
 elementoRadio.appendChild(divRadio2);
 elementoRadio.appendChild(divRadio3);
 elementoRadio.appendChild(divRadio4);
 elementoRadio.appendChild(divRadio5);
 
-divRadio1.classList.add("radios");
-divRadio2.classList.add("radios");
-divRadio3.classList.add("radios");
-divRadio4.classList.add("radios");
-divRadio5.classList.add("radios");
+divRadio1.classList.add("divRadio");
+divRadio2.classList.add("divRadio");
+divRadio3.classList.add("divRadio");
+divRadio4.classList.add("divRadio");
+divRadio5.classList.add("divRadio");
 
 elementoRadio.setAttribute("id", "idRadio")
 
@@ -481,12 +471,10 @@ elementoRadio.setAttribute("id", "idRadio")
 // RADIO 1
 const botaoRadio1=document.createElement("input");
 const labelBotaoRadio1=document.createElement("label");
-botaoRadio1.classList.add("bordaradio");
-labelBotaoRadio1.classList.add("bordaradio");
 botaoRadio1.setAttribute("type", "radio");
-botaoRadio1.setAttribute("id","btnRadio1");
 divRadio1.appendChild(botaoRadio1);
 divRadio1.appendChild(labelBotaoRadio1);
+
 labelBotaoRadio1.textContent="Sort";
 // CHECKER RADIO1
 botaoRadio1.addEventListener("click",()=>{
@@ -500,15 +488,10 @@ botaoRadio1.addEventListener("click",()=>{
 // RADIO 2
 const botaoRadio2=document.createElement("input");
 const labelBotaoRadio2=document.createElement("label");
-botaoRadio2.classList.add("bordaradio");
-labelBotaoRadio2.classList.add("bordaradio");
 botaoRadio2.type = "radio";
-botaoRadio2.value = "radioOpcao2";
-botaoRadio2.id="radioOpcao2"
-botaoRadio2.className = "botaoRadio"
 divRadio2.appendChild(botaoRadio2)
 divRadio2.appendChild(labelBotaoRadio2)
-labelBotaoRadio2.textContent="Compare Function"
+labelBotaoRadio2.textContent="Compare_Function"
 // CHECKER RADIO2
 botaoRadio2.addEventListener("click",()=>{
     botaoRadio4.checked = false;
@@ -521,16 +504,10 @@ botaoRadio2.addEventListener("click",()=>{
 // RADIO 3
 const botaoRadio3=document.createElement("input");
 const labelBotaoRadio3=document.createElement("label");
-botaoRadio3.classList.add("bordaradio");
-labelBotaoRadio3.classList.add("bordaradio");
-
 botaoRadio3.type = "radio";
-botaoRadio3.value = "radioOpcao3";
-botaoRadio3.id="radioOpcao3"
-botaoRadio3.className = "botaoRadio"
 divRadio3.appendChild(botaoRadio3)
 divRadio3.appendChild(labelBotaoRadio3)
-labelBotaoRadio3.textContent="Bubble Sort"
+labelBotaoRadio3.textContent="Bubble_Sort"
 // CHECKER RADIO3
 botaoRadio3.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -542,15 +519,10 @@ botaoRadio3.addEventListener("click",()=>{
 // RADIO 4
 const botaoRadio4=document.createElement("input");
 const labelBotaoRadio4=document.createElement("label");
-botaoRadio4.classList.add("bordaradio");
-labelBotaoRadio4.classList.add("bordaradio");
 botaoRadio4.type = "radio";
-botaoRadio4.value = "radioOpcao4";
-botaoRadio4.id="radioOpcao3"
-botaoRadio4.className = "botaoRadio"
 divRadio4.appendChild(botaoRadio4)
 divRadio4.appendChild(labelBotaoRadio4)
-labelBotaoRadio4.textContent="Quick Sort"
+labelBotaoRadio4.textContent="Quick_Sort"
 // CHECKER RADIO3
 botaoRadio4.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -563,15 +535,10 @@ botaoRadio4.addEventListener("click",()=>{
 // RADIO 5
 const botaoRadio5=document.createElement("input");
 const labelBotaoRadio5=document.createElement("label");
-botaoRadio5.classList.add("bordaradio");
-labelBotaoRadio5.classList.add("bordaradio");
 botaoRadio5.type = "radio";
-botaoRadio5.value = "radioOpcao5";
-botaoRadio5.id="radioOpcao5"
-botaoRadio5.className = "botaoRadio"
 divRadio5.appendChild(botaoRadio5)
 divRadio5.appendChild(labelBotaoRadio5)
-labelBotaoRadio5.textContent="Selection Sort"
+labelBotaoRadio5.textContent="Selection_Sort"
 // CHECKER RADIO3
 botaoRadio5.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -579,6 +546,23 @@ botaoRadio5.addEventListener("click",()=>{
     botaoRadio3.checked = false;
     botaoRadio4.checked = false;
 })
+
+// CSS CLASS RADIOS
+labelBotaoRadio1.classList.add("labelradio");
+botaoRadio1.classList.add("radios");
+labelBotaoRadio2.classList.add("labelradio");
+botaoRadio2.classList.add("radios");
+labelBotaoRadio3.classList.add("labelradio");
+botaoRadio3.classList.add("radios");
+labelBotaoRadio4.classList.add("labelradio");
+botaoRadio4.classList.add("radios");
+labelBotaoRadio5.classList.add("labelradio");
+botaoRadio5.classList.add("radios");
+
+//CLAASSE DIV RADIOS
+divRadio1.classList.add("divRadio");
+
+
 
 botaoRadio1.addEventListener("click",()=>{
   if(botaoRadio1.checked==true){
@@ -625,16 +609,21 @@ mounted(){
   this.btnTeste();
 }
 })
-export default class Compn_Ordenacao1 extends Vue {}
+export default class Compn_Ordenacao1 extends Vue {
+message: any;
+}
 </script>
 
 <style>
+
 .mudaCorTesxtoOrdenar{
   color: red;
+  height: 50px;
+  border-radius: 10px;
+  background-color:yellow;
+
 }
-.removendoClasse{
-  
-}
+
 .msg{
   color: blue;
   margin: 6px;
@@ -646,22 +635,45 @@ export default class Compn_Ordenacao1 extends Vue {}
   background-color: yellow;
   color: red;
 }
-.radios{
-  margin: 6px;
-  padding: 5px;
+.radios {
+  width: 25px;
+  height: 25px;
+}
+  .labelradio{
+    color:blue;
+    font-size:25px;
+    margin: 3px;
+    margin-right: 30px;
+    padding-right: 30px;
   }
+
   .mergem{
   margin: 6px 1px;
-  padding: px;
+ 
 }
-.bordaradio{  
-  border-color: blue;
-  color: blue;
-}
+
 .input{
  width: 50%;
-border-color: blue;
+ height: 50px;
+ border-radius: 10px;
+ border-color: blue;
 }
+.btn{
+  border-color: blueviolet;
+ height: 50px;
+ color: blue;
+ border-radius: 10px;
+}
+.btn:hover{
+  
+  background-color: yellow;
+  color: red;}
+
+.divRadio{
+ text-align: start;
+ padding-left: 20%;
+}
+
 </style>
 
 
