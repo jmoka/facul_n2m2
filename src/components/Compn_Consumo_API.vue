@@ -17,7 +17,6 @@
       <br>
 
       <div class="row container-fluid">
-
        
         <div id="Var_imagem" class="col   ">
           <h1 class=" text-primary ">{{Var_texto_imagem}}</h1>
@@ -56,10 +55,6 @@
             <div class="col   "><button @click="Var_Anterior" class="btn btn-outline-secondary float-center" type="button" >Anterior</button></div>
             <div class="col  "><button @click="Var_Proximo" class="btn btn-outline-secondary float-center" type="button" >Proximo</button></div>
           </div>
-
-        
-       
-
         </div>        
       </div>   
       
@@ -125,14 +120,11 @@ import { Options, Vue } from 'vue-class-component';
             } catch (error) {
                alert(error);
             }
-
-            
       },
       
       Var_abrir_site(){
         console.log('abrir site');
-              
-      },
+        },
 
       async Var_Proximo(){
         console.log("Proximo")
@@ -169,7 +161,6 @@ import { Options, Vue } from 'vue-class-component';
                 this.Var_qtdCard--;
                 if (this.Var_qtdCard > -1){
                 console.log(this.Var_qtdCard);
-                               
                 this.Var_imagem = objetoAPI.data[this.Var_qtdCard].avatar 
                 this.Var_id_API = objetoAPI.data[this.Var_qtdCard].id
                 this.Var_nome_API = objetoAPI.data[this.Var_qtdCard].first_name  
@@ -215,30 +206,23 @@ export default class App extends Vue {
   Var_Proximo:undefined;
   Var_index:number| undefined;
   Var_qtdCard_inicial:string|undefined;
-  
-
-    
+      
 }
 </script>
 
 <style >
-
-
-
 
 #id_div_principla{
 
   border: 1px solid red;
   display:inline-block; 
   padding: 10px;
-
 }
 
 .img{
   height: 80%;
   width: 80%;
 }
-
 
 .stilo1{
   font-size: 20px;
@@ -247,16 +231,12 @@ export default class App extends Vue {
   box-shadow: 2px 2px 2px #888888;
 }
 
-
 .stilo2{
   font-size: 20px;
   color:black;
   background-color:azure ;
   box-shadow: 2px 2px 2px #888888;
-  
-}
-
-
+  }
 
 .divMain{
   display: flex;
@@ -264,14 +244,12 @@ export default class App extends Vue {
   width: 100%;
   border: 2px solid blue;
   padding: 20px;
-  
-}
+  }
+
 main{
   display: flex; 
   justify-content: center; 
   align-items: center;
-
-
 }
 
 .inputs{
@@ -283,16 +261,17 @@ main{
   margin-left: 6px;
   height: 20px;
   }
+
   .div_principal{
   border: 3px;
   border-color: blue;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   }
+
   .label{
    color:   blue;
-
-  }
+   }
 
   .botao{
   border: 2px solid blue;
@@ -307,6 +286,7 @@ main{
   .btn{
     color: blue;
   }
+
   .btn:hover{
     color: red;
     background-color: yellow;

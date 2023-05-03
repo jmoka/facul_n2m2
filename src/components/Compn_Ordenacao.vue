@@ -444,7 +444,7 @@ btnOrdenar.addEventListener("click",()=>{
 
 //==========================================================================
 
-// todo: RADIOS  
+// DIV's RADIOS  
 const elementoRadio=document.createElement("div");
 const divRadio1=document.createElement("div");
 const divRadio2=document.createElement("div");
@@ -457,16 +457,12 @@ elementoRadio.appendChild(divRadio3);
 elementoRadio.appendChild(divRadio4);
 elementoRadio.appendChild(divRadio5);
 
+//CLASSE DAS DIV'S
 divRadio1.classList.add("divRadio");
 divRadio2.classList.add("divRadio");
 divRadio3.classList.add("divRadio");
 divRadio4.classList.add("divRadio");
 divRadio5.classList.add("divRadio");
-
-elementoRadio.setAttribute("id", "idRadio")
-
-// elementoRadio.className = "classeRadio"
-// elementoRadio.id="idRadio"
 
 // RADIO 1
 const botaoRadio1=document.createElement("input");
@@ -474,8 +470,8 @@ const labelBotaoRadio1=document.createElement("label");
 botaoRadio1.setAttribute("type", "radio");
 divRadio1.appendChild(botaoRadio1);
 divRadio1.appendChild(labelBotaoRadio1);
-
 labelBotaoRadio1.textContent="Sort";
+
 // CHECKER RADIO1
 botaoRadio1.addEventListener("click",()=>{
     botaoRadio2.checked = false;
@@ -492,6 +488,7 @@ botaoRadio2.type = "radio";
 divRadio2.appendChild(botaoRadio2)
 divRadio2.appendChild(labelBotaoRadio2)
 labelBotaoRadio2.textContent="Compare_Function"
+
 // CHECKER RADIO2
 botaoRadio2.addEventListener("click",()=>{
     botaoRadio4.checked = false;
@@ -508,6 +505,7 @@ botaoRadio3.type = "radio";
 divRadio3.appendChild(botaoRadio3)
 divRadio3.appendChild(labelBotaoRadio3)
 labelBotaoRadio3.textContent="Bubble_Sort"
+
 // CHECKER RADIO3
 botaoRadio3.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -523,6 +521,7 @@ botaoRadio4.type = "radio";
 divRadio4.appendChild(botaoRadio4)
 divRadio4.appendChild(labelBotaoRadio4)
 labelBotaoRadio4.textContent="Quick_Sort"
+
 // CHECKER RADIO3
 botaoRadio4.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -539,6 +538,7 @@ botaoRadio5.type = "radio";
 divRadio5.appendChild(botaoRadio5)
 divRadio5.appendChild(labelBotaoRadio5)
 labelBotaoRadio5.textContent="Selection_Sort"
+
 // CHECKER RADIO3
 botaoRadio5.addEventListener("click",()=>{
     botaoRadio1.checked = false;
@@ -559,8 +559,7 @@ botaoRadio4.classList.add("radios");
 labelBotaoRadio5.classList.add("labelradio");
 botaoRadio5.classList.add("radios");
 
-//CLAASSE DIV RADIOS
-divRadio1.classList.add("divRadio");
+
 
 
 
@@ -592,16 +591,12 @@ botaoRadio5.addEventListener("click",()=>{
  container.appendChild(elementoRadio)
  container.appendChild(saidaElemento)
 
-
-
-
 const sistOrdenar = document.getElementById('containerPrincipal');
       sistOrdenar?.replaceWith(container);
       
 function mergeSort(saida: number[]): string {
     throw new Error("Function not implemented.");
 }
-
     },
   },
   
@@ -621,7 +616,6 @@ message: any;
   height: 50px;
   border-radius: 10px;
   background-color:yellow;
-
 }
 
 .msg{
@@ -629,16 +623,18 @@ message: any;
   margin: 6px;
   padding: 5px;
   
-
 }
+
 .msg:hover{
   background-color: yellow;
   color: red;
 }
+
 .radios {
   width: 25px;
   height: 25px;
 }
+
   .labelradio{
     color:blue;
     font-size:25px;
@@ -658,12 +654,14 @@ message: any;
  border-radius: 10px;
  border-color: blue;
 }
+
 .btn{
   border-color: blueviolet;
  height: 50px;
  color: blue;
  border-radius: 10px;
 }
+
 .btn:hover{
   
   background-color: yellow;
