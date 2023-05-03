@@ -197,7 +197,7 @@ export default class App extends Vue {
   Var_div_principal: unknown;
   Var_titulo: string | undefined;
   var_processar:undefined;
-  Var_imagem:any;
+  Var_imagem:undefined;
   Var_texto_imagem:string | undefined;
   Var_texto_informacoes:string | undefined;
   Var_visivel:boolean | undefined;
